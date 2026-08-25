@@ -2,7 +2,7 @@
 
 ![Phoenix Arcade cover](https://raw.githubusercontent.com/Soldatix/apps-and-games/main/assets/images/phoenix-arcade-cover.png)
 
-**Play online:** https://phoenix-arcade.elvis-soldatic.chatgpt.site
+**Play online:** https://phoenix-arcade.appsandgames.org
 
 Phoenix Arcade is a free, modern, standalone browser game with five interface languages, keyboard and touch controls, local save support, collectible power-ups, fullscreen mode, and synthesized sound effects.
 
