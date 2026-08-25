@@ -1,6 +1,6 @@
 # Phoenix Arcade
 
-![Phoenix Arcade cover](assets/phoenix-arcade-cover.png)
+![Phoenix Arcade cover](https://raw.githubusercontent.com/Soldatix/apps-and-games/main/assets/images/phoenix-arcade-cover.png)
 
 **Play online:** https://phoenix-arcade.elvis-soldatic.chatgpt.site
 
