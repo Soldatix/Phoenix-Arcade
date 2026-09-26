@@ -6,6 +6,10 @@
 
 Phoenix Arcade is a free, modern, standalone browser game with five interface languages, keyboard and touch controls, local save support, collectible power-ups, fullscreen mode, and synthesized sound effects.
 
+## Web App / PWA
+
+The modernization branch includes a local PWA manifest, service worker, 192×192 and 512×512 app icons, plus the Apps & Games `?install=web` flow. The install panel supports browser install availability, installed/dismissed/unavailable states, language synchronization, and **Continue in browser** URL cleanup. Final install/offline behavior must be confirmed in the HUMAN_GATE browser test before these capabilities are treated as production-verified.
+
 ## English
 
 Phoenix Arcade is a standalone browser game. Open `index.html` in a modern browser; no installation or internet connection is required.
@@ -20,7 +24,7 @@ Phoenix Arcade is a standalone browser game. Open `index.html` in a modern brows
 - You start with three lives. A diving enemy or plasma bolt removes one life.
 - Destroyed enemies can drop a bonus: **Shield** blocks one hit, **Double laser** fires two beams for 12 seconds, and **Rapid fire** increases firing speed for 10 seconds.
 
-The top toolbar contains language, sound, fullscreen, and Information / Donations controls. **Save & Exit** stores the current score, wave, lives, player position, and destroyed enemies in the browser. **Exit without save** removes the saved game. Language and sound preferences are remembered automatically.
+The top toolbar contains language, a persistent Dark / Light / System theme control, sound, fullscreen, and Information / Donations controls. **Save & Exit** stores the current score, wave, lives, player position, and destroyed enemies in the browser. **Exit without save** removes the saved game. Language and sound preferences are remembered automatically.
 
 ---
 
