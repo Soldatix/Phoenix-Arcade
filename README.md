@@ -6,6 +6,10 @@
 
 Phoenix Arcade is a free, modern, standalone browser game with five interface languages, keyboard and touch controls, local save support, collectible power-ups, fullscreen mode, and synthesized sound effects.
 
+## Web App / PWA
+
+The modernization branch includes a local PWA manifest, service worker, 192×192 and 512×512 app icons, plus the Apps & Games `?install=web` flow. The install panel supports browser install availability, installed/dismissed/unavailable states, language synchronization, and **Continue in browser** URL cleanup. Final install/offline behavior must be confirmed in the HUMAN_GATE browser test before these capabilities are treated as production-verified.
+
 ## English
 
 Phoenix Arcade is a standalone browser game. Open `index.html` in a modern browser; no installation or internet connection is required.
