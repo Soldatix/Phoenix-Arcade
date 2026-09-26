@@ -1,4 +1,4 @@
-const CACHE_NAME = 'phoenix-arcade-2026-09-26-v2';
+const CACHE_NAME = 'phoenix-arcade-2026-09-26-v3';
 const CORE_ASSETS = [
   './',
   './index.html',

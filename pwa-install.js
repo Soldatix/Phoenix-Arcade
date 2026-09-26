@@ -164,7 +164,7 @@
     install.id = 'installWebAppButton';
     install.className = 'web-install-primary';
     install.textContent = installState === 'installed' ? text.installedAction : text.install;
-    install.disabled = installState === 'installed' || !deferredWebInstallPrompt;
+    install.disabled = installState === 'installed' || installState === 'installing';
     install.addEventListener('click', async () => {
       if (isStandalone()) {
         render('installed');
@@ -213,11 +213,11 @@
   languageObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js', { scope: './' }).catch((error) => {
+    navigator.serviceWorker.register('./sw.js', { scope: './' })
+      .then(() => navigator.serviceWorker.ready)
+      .catch((error) => {
         console.warn('Phoenix Arcade service worker registration failed', error);
       });
-    });
   }
 
   if (installRequested) {
@@ -226,6 +226,6 @@
       if (installRequested && !deferredWebInstallPrompt && !isStandalone() && installState === 'waiting') {
         render('unavailable');
       }
-    }, 3000);
+    }, 8000);
   }
 })();
