@@ -1,10 +1,10 @@
-const CACHE_NAME = 'phoenix-arcade-2026-09-26-v3';
+const CACHE_NAME = 'phoenix-arcade-2026-09-26-v4';
 const CORE_ASSETS = [
   './',
   './index.html',
   './ag-language-menu.js',
   './pwa-install.js',
-  './manifest.webmanifest',
+  './manifest.webmanifest?v=4',
   './icons/phoenix-192.png',
   './icons/phoenix-512.png'
 ];
