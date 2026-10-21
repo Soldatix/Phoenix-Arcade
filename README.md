@@ -26,6 +26,13 @@ Phoenix Arcade is a standalone browser game. Open `index.html` in a modern brows
 
 The top toolbar contains language, a persistent Dark / Light / System theme control, sound, fullscreen, and Information / Donations controls. **Save & Exit** stores the current score, wave, lives, player position, and destroyed enemies in the browser. **Exit without save** removes the saved game. Language and sound preferences are remembered automatically.
 
+
+### Credits
+
+If you use our source code to create your own version, we'd appreciate a mention in its About / Info section:
+
+**Based on Phoenix Arcade by Apps & Games — [appsandgames.org](https://appsandgames.org/)**
+
 ---
 
 ## Hrvatski
@@ -43,6 +50,13 @@ Phoenix Arcade je samostalna igra za internetski preglednik. Otvorite `index.htm
 - Uništeni neprijatelji mogu ispustiti bonus: **Zaštitni plašt** blokira jedan pogodak, **Dvostruki laser** ispaljuje dvije zrake 12 sekundi, a **Brže pucanje** povećava brzinu paljbe 10 sekundi.
 
 Gornja alatna traka sadrži izbor jezika, zvuk, puni zaslon i Information / Donations. **Spremi i izađi** sprema rezultat, val, živote, položaj igrača i uništene neprijatelje u preglednik. **Izađi bez spremanja** briše spremljenu igru. Odabrani jezik i postavka zvuka pamte se automatski.
+
+
+### Zasluge
+
+Ako koristiš naš izvorni kod za vlastitu verziju igre, bili bismo zahvalni da nas spomeneš u odjeljku O aplikaciji / Info:
+
+**Temeljeno na igri Phoenix Arcade autora Apps & Games — [appsandgames.org](https://appsandgames.org/)**
 
 ---
 
@@ -62,6 +76,13 @@ Phoenix Arcade ist ein eigenständiges Browserspiel. Öffnen Sie `index.html` in
 
 Die obere Leiste enthält Sprache, Ton, Vollbild und Information / Donations. **Speichern & Beenden** speichert Punkte, Welle, Leben, Spielerposition und zerstörte Gegner im Browser. **Ohne Speichern beenden** löscht den Spielstand. Sprache und Toneinstellung werden automatisch gespeichert.
 
+
+### Danksagung
+
+Wenn du unseren Quellcode für eine eigene Version verwendest, würden wir uns über einen Hinweis unter Über / Info freuen:
+
+**Basierend auf Phoenix Arcade von Apps & Games — [appsandgames.org](https://appsandgames.org/)**
+
 ---
 
 ## Italiano
@@ -80,6 +101,13 @@ Phoenix Arcade è un gioco autonomo per browser. Apri `index.html` in un browser
 
 La barra superiore contiene lingua, audio, schermo intero e Information / Donations. **Salva ed esci** memorizza nel browser punteggio, ondata, vite, posizione del giocatore e nemici distrutti. **Esci senza salvare** elimina la partita salvata. Lingua e audio vengono ricordati automaticamente.
 
+
+### Riconoscimenti
+
+Se utilizzi il nostro codice sorgente per creare una tua versione del gioco, apprezzeremmo una menzione nella sezione Informazioni / Info:
+
+**Basato su Phoenix Arcade di Apps & Games — [appsandgames.org](https://appsandgames.org/)**
+
 ---
 
 ## Español
@@ -97,3 +125,10 @@ Phoenix Arcade es un juego independiente para navegador. Abre `index.html` en un
 - Los enemigos destruidos pueden soltar un bono: **Escudo protector** bloquea un impacto, **Láser doble** dispara dos rayos durante 12 segundos y **Fuego rápido** aumenta la velocidad de disparo durante 10 segundos.
 
 La barra superior contiene idioma, sonido, pantalla completa e Information / Donations. **Guardar y salir** almacena en el navegador la puntuación, la oleada, las vidas, la posición del jugador y los enemigos destruidos. **Salir sin guardar** elimina la partida guardada. El idioma y el sonido se recuerdan automáticamente.
+
+
+### Reconocimientos
+
+Si utilizas nuestro código fuente para crear tu propia versión del juego, agradeceríamos una mención en la sección Acerca de / Información:
+
+**Basado en Phoenix Arcade de Apps & Games — [appsandgames.org](https://appsandgames.org/)**
