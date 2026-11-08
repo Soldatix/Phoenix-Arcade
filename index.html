@@ -208,7 +208,7 @@
         <div class="phoenix-crypto-row"><div class="phoenix-crypto-code">RVN</div><div class="phoenix-crypto-address">RAtXzKZyB3awfq2u2cK8YppC9kJamU5tPQ</div><button class="phoenix-copy-btn" data-address="RAtXzKZyB3awfq2u2cK8YppC9kJamU5tPQ" onclick="copyPhoenixWallet(this)">Copy</button></div>
         </div>
       </div>
-      <div class="phoenix-info-footer"><button class="phoenix-info-close" id="phoenixInfoClose" data-close="infoModal">Close</button></div>
+      <div class="phoenix-info-footer"><button class="phoenix-info-close" id="phoenixPrivacyBtn" type="button">Privacy choices</button><button class="phoenix-info-close" id="phoenixInfoClose" data-close="infoModal">Close</button></div>
     </div>
   </div>
   <div class="modal hidden" id="howModal" role="dialog" aria-modal="true" aria-labelledby="howTitle"><div class="modal-card"><div class="modal-head"><h2 id="howTitle" data-i18n="howToPlay">How to play</h2><button class="close" data-close="howModal" aria-label="Close">✕</button></div><div class="info-text" id="howText"></div></div></div><div class="toast" id="toast"></div>
@@ -306,10 +306,13 @@
     function setModalBackgroundInert(active){const app=$('.app'),install=$('#webInstallBanner');if(app)app.inert=active;if(install)install.inert=active}
     function showModal(id){const modal=$(id);if(!modal)return;modalReturnFocus=document.activeElement;modal.classList.remove('hidden');setModalBackgroundInert(true);const first=modalFocusable(modal)[0];if(first)requestAnimationFrame(()=>first.focus())}
     function closeModal(modal){if(!modal)return;modal.classList.add('hidden');setModalBackgroundInert(false);const returnFocus=modalReturnFocus;modalReturnFocus=null;if(returnFocus&&typeof returnFocus.focus==='function')requestAnimationFrame(()=>returnFocus.focus())}
+    const syncPrivacyButton=()=>{const labels={en:"Privacy choices",hr:"Postavke privatnosti",de:"Datenschutz",it:"Preferenze privacy",es:"Opciones de privacidad"};$('#phoenixPrivacyBtn').textContent=labels[prefs.lang]||labels.en;};
+    $('#phoenixPrivacyBtn').onclick=()=>window.AppsGamesPrivacy?.openPreferences?.();
+    $('#language').addEventListener('change',syncPrivacyButton);
     $('#infoBtn').onclick=()=>showModal('#infoModal');$('#menuInfoBtn').onclick=()=>showModal('#infoModal');$('#howBtn').onclick=()=>showModal('#howModal');document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal($('#'+b.dataset.close)));document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModal(m)}));
     addEventListener('keydown',e=>{const openModal=document.querySelector('.modal:not(.hidden)');if(openModal){if(e.code==='Escape'){e.preventDefault();closeModal(openModal);return}if(e.key==='Tab'){const items=modalFocusable(openModal);if(!items.length){e.preventDefault();return}const first=items[0],last=items[items.length-1],active=document.activeElement;if(e.shiftKey&&(active===first||!openModal.contains(active))){e.preventDefault();last.focus()}else if(!e.shiftKey&&(active===last||!openModal.contains(active))){e.preventDefault();first.focus()}}return}if(['ArrowLeft','ArrowRight','Space'].includes(e.code))e.preventDefault();keys[e.code]=true;if(e.code==='Space')shoot();if(e.code==='KeyP'||e.code==='Escape')pauseGame()});addEventListener('keyup',e=>keys[e.code]=false);addEventListener('blur',()=>{if(state==='playing'&&!paused)pauseGame(true)});
     bindHold($('#leftBtn'),'ArrowLeft');bindHold($('#rightBtn'),'ArrowRight');bindHold($('#fireBtn'),'Space');
-    initStars();player=newPlayer();createWave();applyTheme(false);applyLanguage();$('#soundIcon').textContent=prefs.sound?'🔊':'🔇';refreshResume();updateHud();requestAnimationFrame(loop);
+    initStars();player=newPlayer();createWave();applyTheme(false);applyLanguage();syncPrivacyButton();$('#soundIcon').textContent=prefs.sound?'🔊':'🔇';refreshResume();updateHud();requestAnimationFrame(loop);
   })();
   </script>
 </body>
