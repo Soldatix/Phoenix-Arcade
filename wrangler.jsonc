@@ -1,0 +1,9 @@
+{
+  "name": "phoenix-arcade",
+  "compatibility_date": "2026-11-08",
+  "assets": {
+    "directory": "./",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  }
+}
