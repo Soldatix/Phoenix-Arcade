@@ -1,0 +1,10 @@
+# Publish only the static Phoenix Arcade website.
+.git/
+.github/
+.wrangler/
+README.md
+wrangler.jsonc
+.assetsignore
+docs/
+tests/
+*.md

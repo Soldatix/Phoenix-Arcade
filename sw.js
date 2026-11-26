@@ -1,7 +1,9 @@
-const CACHE_NAME = 'phoenix-arcade-2026-09-26-v4';
+const CACHE_NAME = 'phoenix-arcade-2026-11-26-seo-offline-v5';
+const APP_ENTRY = new URL('./', self.location.href).href;
+const APP_PATH = new URL(APP_ENTRY).pathname;
+const LEGACY_PATH = new URL('index.html', APP_ENTRY).pathname;
 const CORE_ASSETS = [
-  './',
-  './index.html',
+  new Request(APP_ENTRY, { cache: 'reload', redirect: 'error' }),
   './ag-language-menu.js',
   './pwa-install.js',
   './manifest.webmanifest?v=4',
@@ -29,6 +31,19 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+async function navigationNetworkFirst(request) {
+  let response;
+  try { response = await fetch(request); }
+  catch {
+    return (await (await caches.open(CACHE_NAME)).match(APP_ENTRY)) || Response.error();
+  }
+  if (response.ok && !response.redirected && response.url === APP_ENTRY &&
+      (response.headers.get('content-type') || '').toLowerCase().includes('text/html')) {
+    try { await (await caches.open(CACHE_NAME)).put(APP_ENTRY, response.clone()); } catch {}
+  }
+  return response;
+}
+
 self.addEventListener('fetch', (event) => {
   const request = event.request;
   if (request.method !== 'GET') return;
@@ -37,17 +52,8 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return;
 
   if (request.mode === 'navigate') {
-    event.respondWith(
-      fetch(request)
-        .then((response) => {
-          if (response.ok) {
-            const copy = response.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put('./index.html', copy));
-          }
-          return response;
-        })
-        .catch(() => caches.match('./index.html'))
-    );
+    if (url.pathname !== APP_PATH && url.pathname !== LEGACY_PATH) return;
+    event.respondWith(navigationNetworkFirst(request));
     return;
   }
 
